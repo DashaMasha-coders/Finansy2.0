@@ -24,5 +24,25 @@ namespace Finansy2._0
             account = account + add;
             maskedTextBox1.Clear();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void maskedTextBox3_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
