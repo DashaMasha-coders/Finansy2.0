@@ -31,7 +31,7 @@
             components = new System.ComponentModel.Container();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
-            button2 = new Button();
+            but_add = new Button();
             maskedTextBox2 = new MaskedTextBox();
             comboBox1 = new ComboBox();
             maskedTextBox1 = new MaskedTextBox();
@@ -44,7 +44,7 @@
             label2 = new Label();
             label1 = new Label();
             tabPage2 = new TabPage();
-            button1 = new Button();
+            but_account = new Button();
             toolTip1 = new ToolTip(components);
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -62,7 +62,7 @@
             // 
             // tabPage1
             // 
-            tabPage1.Controls.Add(button2);
+            tabPage1.Controls.Add(but_add);
             tabPage1.Controls.Add(maskedTextBox2);
             tabPage1.Controls.Add(comboBox1);
             tabPage1.Controls.Add(maskedTextBox1);
@@ -79,15 +79,16 @@
             tabPage1.Text = "Доходы";
             tabPage1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // but_add
             // 
-            button2.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button2.Location = new Point(87, 307);
-            button2.Name = "button2";
-            button2.Size = new Size(89, 37);
-            button2.TabIndex = 9;
-            button2.Text = "Добавить";
-            button2.UseVisualStyleBackColor = true;
+            but_add.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            but_add.Location = new Point(87, 307);
+            but_add.Name = "but_add";
+            but_add.Size = new Size(89, 37);
+            but_add.TabIndex = 9;
+            but_add.Text = "Добавить";
+            but_add.UseVisualStyleBackColor = true;
+            but_add.Click += but_add_Click;
             // 
             // maskedTextBox2
             // 
@@ -187,28 +188,29 @@
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(788, 356);
+            tabPage2.Size = new Size(788, 367);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Расходы";
             tabPage2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // but_account
             // 
-            button1.Font = new Font("Calibri", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button1.Location = new Point(330, 12);
-            button1.Name = "button1";
-            button1.Size = new Size(153, 44);
-            button1.TabIndex = 1;
-            button1.Text = "Счет";
-            toolTip1.SetToolTip(button1, "Посмотреть счет");
-            button1.UseVisualStyleBackColor = true;
+            but_account.Font = new Font("Calibri", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            but_account.Location = new Point(330, 12);
+            but_account.Name = "but_account";
+            but_account.Size = new Size(153, 44);
+            but_account.TabIndex = 1;
+            but_account.Text = "Счет";
+            toolTip1.SetToolTip(but_account, "Посмотреть счет");
+            but_account.UseVisualStyleBackColor = true;
+            but_account.Click += but_account_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button1);
+            Controls.Add(but_account);
             Controls.Add(tabControl1);
             Name = "Form1";
             Text = "Form1";
@@ -234,8 +236,8 @@
         private ComboBox comboBox1;
         private MaskedTextBox maskedTextBox1;
         private MaskedTextBox maskedTextBox2;
-        private Button button1;
-        private Button button2;
+        private Button but_account;
+        private Button but_add;
         private ToolTip toolTip1;
     }
 }
