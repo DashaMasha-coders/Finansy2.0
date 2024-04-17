@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             button2 = new Button();
@@ -44,6 +45,7 @@
             label1 = new Label();
             tabPage2 = new TabPage();
             button1 = new Button();
+            toolTip1 = new ToolTip(components);
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             SuspendLayout();
@@ -198,6 +200,7 @@
             button1.Size = new Size(153, 44);
             button1.TabIndex = 1;
             button1.Text = "Счет";
+            toolTip1.SetToolTip(button1, "Посмотреть счет");
             button1.UseVisualStyleBackColor = true;
             // 
             // Form1
@@ -233,5 +236,6 @@
         private MaskedTextBox maskedTextBox2;
         private Button button1;
         private Button button2;
+        private ToolTip toolTip1;
     }
 }
