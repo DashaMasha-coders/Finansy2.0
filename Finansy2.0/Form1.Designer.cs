@@ -306,7 +306,7 @@
             // 
             // columnHeader5
             // 
-            columnHeader5.Text = "Категория дохода";
+            columnHeader5.Text = "Категория расходов";
             columnHeader5.TextAlign = HorizontalAlignment.Center;
             columnHeader5.Width = 170;
             // 
@@ -323,9 +323,9 @@
             label5.ForeColor = Color.FromArgb(28, 62, 15);
             label5.Location = new Point(465, 7);
             label5.Name = "label5";
-            label5.Size = new Size(236, 39);
+            label5.Size = new Size(248, 39);
             label5.TabIndex = 13;
-            label5.Text = "Список доходов";
+            label5.Text = "Список расхдово";
             // 
             // label6
             // 
