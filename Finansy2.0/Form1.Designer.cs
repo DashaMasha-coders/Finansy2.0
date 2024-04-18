@@ -33,7 +33,7 @@
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             pictureBox1 = new PictureBox();
-            button1 = new Button();
+            but_add = new Button();
             maskedTextBox2 = new MaskedTextBox();
             comboBox1 = new ComboBox();
             maskedTextBox1 = new MaskedTextBox();
@@ -47,7 +47,7 @@
             label1 = new Label();
             tabPage2 = new TabPage();
             pictureBox2 = new PictureBox();
-            button2 = new Button();
+            but_substr = new Button();
             maskedTextBox3 = new MaskedTextBox();
             comboBox2 = new ComboBox();
             maskedTextBox4 = new MaskedTextBox();
@@ -72,17 +72,17 @@
             // 
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
-            tabControl1.Location = new Point(12, 44);
+            tabControl1.Location = new Point(12, 38);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(850, 395);
+            tabControl1.Size = new Size(850, 401);
             tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
             tabPage1.BackColor = Color.FromArgb(238, 243, 237);
             tabPage1.Controls.Add(pictureBox1);
-            tabPage1.Controls.Add(button1);
+            tabPage1.Controls.Add(but_add);
             tabPage1.Controls.Add(maskedTextBox2);
             tabPage1.Controls.Add(comboBox1);
             tabPage1.Controls.Add(maskedTextBox1);
@@ -94,7 +94,7 @@
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(842, 367);
+            tabPage1.Size = new Size(842, 373);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Доходы";
             // 
@@ -108,17 +108,18 @@
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
             // 
-            // button1
+            // but_add
             // 
-            button1.BackColor = Color.FromArgb(90, 149, 43);
-            button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(80, 306);
-            button1.Margin = new Padding(3, 2, 3, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(127, 34);
-            button1.TabIndex = 9;
-            button1.Text = "Добавить";
-            button1.UseVisualStyleBackColor = false;
+            but_add.BackColor = Color.FromArgb(90, 149, 43);
+            but_add.ForeColor = SystemColors.ButtonHighlight;
+            but_add.Location = new Point(84, 306);
+            but_add.Margin = new Padding(3, 2, 3, 2);
+            but_add.Name = "but_add";
+            but_add.Size = new Size(120, 37);
+            but_add.TabIndex = 9;
+            but_add.Text = "Добавить";
+            but_add.UseVisualStyleBackColor = false;
+            but_add.Click += but_add_Click_1;
             // 
             // maskedTextBox2
             // 
@@ -224,7 +225,7 @@
             // 
             tabPage2.BackColor = Color.FromArgb(238, 243, 237);
             tabPage2.Controls.Add(pictureBox2);
-            tabPage2.Controls.Add(button2);
+            tabPage2.Controls.Add(but_substr);
             tabPage2.Controls.Add(maskedTextBox3);
             tabPage2.Controls.Add(comboBox2);
             tabPage2.Controls.Add(maskedTextBox4);
@@ -236,7 +237,7 @@
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(842, 367);
+            tabPage2.Size = new Size(842, 373);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Расходы";
             // 
@@ -250,17 +251,18 @@
             pictureBox2.TabIndex = 19;
             pictureBox2.TabStop = false;
             // 
-            // button2
+            // but_substr
             // 
-            button2.BackColor = Color.FromArgb(90, 149, 43);
-            button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(77, 305);
-            button2.Margin = new Padding(3, 2, 3, 2);
-            button2.Name = "button2";
-            button2.Size = new Size(127, 34);
-            button2.TabIndex = 18;
-            button2.Text = "Добавить";
-            button2.UseVisualStyleBackColor = false;
+            but_substr.BackColor = Color.FromArgb(90, 149, 43);
+            but_substr.ForeColor = SystemColors.ButtonHighlight;
+            but_substr.Location = new Point(77, 302);
+            but_substr.Margin = new Padding(3, 2, 3, 2);
+            but_substr.Name = "but_substr";
+            but_substr.Size = new Size(120, 37);
+            but_substr.TabIndex = 18;
+            but_substr.Text = "Добавить";
+            but_substr.UseVisualStyleBackColor = false;
+            but_substr.Click += but_substr_Click;
             // 
             // maskedTextBox3
             // 
@@ -274,7 +276,7 @@
             // 
             comboBox2.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Здоровье", "Досуг", "Дом", "Кафе", "Образование", "Очисления", "Непредвиденные" });
+            comboBox2.Items.AddRange(new object[] { "Здоровье", "Досуг", "Дом", "Кафе", "Образование", "Такси и транспорт", "Очисления", "Непредвиденные" });
             comboBox2.Location = new Point(14, 156);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(265, 31);
@@ -287,6 +289,7 @@
             maskedTextBox4.Name = "maskedTextBox4";
             maskedTextBox4.Size = new Size(265, 31);
             maskedTextBox4.TabIndex = 15;
+            maskedTextBox4.MaskInputRejected += maskedTextBox4_MaskInputRejected;
             // 
             // listView2
             // 
@@ -308,7 +311,7 @@
             // 
             columnHeader5.Text = "Категория расходов";
             columnHeader5.TextAlign = HorizontalAlignment.Center;
-            columnHeader5.Width = 170;
+            columnHeader5.Width = 175;
             // 
             // columnHeader6
             // 
@@ -323,9 +326,9 @@
             label5.ForeColor = Color.FromArgb(28, 62, 15);
             label5.Location = new Point(465, 7);
             label5.Name = "label5";
-            label5.Size = new Size(248, 39);
+            label5.Size = new Size(231, 39);
             label5.TabIndex = 13;
-            label5.Text = "Список расхдово";
+            label5.Text = "Список расхдов";
             // 
             // label6
             // 
@@ -412,8 +415,8 @@
         private MaskedTextBox maskedTextBox2;
         private Button but_account;
         private ToolTip toolTip1;
-        private Button button1;
-        private Button button2;
+        private Button but_add;
+        private Button but_substr;
         private MaskedTextBox maskedTextBox3;
         private ComboBox comboBox2;
         private MaskedTextBox maskedTextBox4;
