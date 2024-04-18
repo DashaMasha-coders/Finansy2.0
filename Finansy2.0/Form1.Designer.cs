@@ -44,8 +44,6 @@
             label2 = new Label();
             label1 = new Label();
             tabPage2 = new TabPage();
-            but_account = new Button();
-            toolTip1 = new ToolTip(components);
             button2 = new Button();
             maskedTextBox3 = new MaskedTextBox();
             comboBox2 = new ComboBox();
@@ -58,6 +56,8 @@
             label6 = new Label();
             label7 = new Label();
             label8 = new Label();
+            but_account = new Button();
+            toolTip1 = new ToolTip(components);
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
@@ -75,6 +75,7 @@
             // 
             // tabPage1
             // 
+            tabPage1.BackColor = Color.FromArgb(238, 243, 237);
             tabPage1.Controls.Add(button1);
             tabPage1.Controls.Add(maskedTextBox2);
             tabPage1.Controls.Add(comboBox1);
@@ -86,21 +87,22 @@
             tabPage1.Controls.Add(label1);
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3, 3, 3, 3);
+            tabPage1.Padding = new Padding(3);
             tabPage1.Size = new Size(842, 367);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Доходы";
-            tabPage1.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
+            button1.BackColor = Color.FromArgb(90, 149, 43);
+            button1.ForeColor = SystemColors.ButtonHighlight;
             button1.Location = new Point(80, 306);
             button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
             button1.Size = new Size(127, 34);
             button1.TabIndex = 9;
             button1.Text = "Добавить";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             // 
             // maskedTextBox2
             // 
@@ -161,6 +163,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Calibri", 24F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label4.ForeColor = Color.FromArgb(28, 62, 15);
             label4.Location = new Point(473, 8);
             label4.Name = "label4";
             label4.Size = new Size(236, 39);
@@ -171,6 +174,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Calibri", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label3.ForeColor = Color.FromArgb(28, 62, 15);
             label3.Location = new Point(54, 202);
             label3.Name = "label3";
             label3.Size = new Size(188, 36);
@@ -181,6 +185,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Calibri", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label2.ForeColor = Color.FromArgb(28, 62, 15);
             label2.Location = new Point(32, 102);
             label2.Name = "label2";
             label2.Size = new Size(235, 36);
@@ -191,6 +196,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Calibri", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label1.ForeColor = Color.FromArgb(28, 62, 15);
             label1.Location = new Point(50, 11);
             label1.Name = "label1";
             label1.Size = new Size(192, 36);
@@ -200,6 +206,7 @@
             // 
             // tabPage2
             // 
+            tabPage2.BackColor = Color.FromArgb(238, 243, 237);
             tabPage2.Controls.Add(button2);
             tabPage2.Controls.Add(maskedTextBox3);
             tabPage2.Controls.Add(comboBox2);
@@ -211,33 +218,22 @@
             tabPage2.Controls.Add(label8);
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3, 3, 3, 3);
+            tabPage2.Padding = new Padding(3);
             tabPage2.Size = new Size(842, 367);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Расходы";
-            tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // but_account
-            // 
-            but_account.Font = new Font("Calibri", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            but_account.Location = new Point(316, 12);
-            but_account.Name = "but_account";
-            but_account.Size = new Size(171, 44);
-            but_account.TabIndex = 1;
-            but_account.Text = "Баланс";
-            toolTip1.SetToolTip(but_account, "Посмотреть баланс");
-            but_account.UseVisualStyleBackColor = true;
-            but_account.Click += but_account_Click;
             // 
             // button2
             // 
+            button2.BackColor = Color.FromArgb(90, 149, 43);
+            button2.ForeColor = SystemColors.ButtonHighlight;
             button2.Location = new Point(77, 305);
             button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
             button2.Size = new Size(127, 34);
             button2.TabIndex = 18;
             button2.Text = "Добавить";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             // 
             // maskedTextBox3
             // 
@@ -297,6 +293,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Calibri", 24F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label5.ForeColor = Color.FromArgb(28, 62, 15);
             label5.Location = new Point(465, 7);
             label5.Name = "label5";
             label5.Size = new Size(236, 39);
@@ -307,6 +304,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Calibri", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label6.ForeColor = Color.FromArgb(28, 62, 15);
             label6.Location = new Point(46, 201);
             label6.Name = "label6";
             label6.Size = new Size(188, 36);
@@ -317,6 +315,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Calibri", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label7.ForeColor = Color.FromArgb(28, 62, 15);
             label7.Location = new Point(24, 101);
             label7.Name = "label7";
             label7.Size = new Size(260, 36);
@@ -327,16 +326,32 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Calibri", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label8.ForeColor = Color.FromArgb(28, 62, 15);
             label8.Location = new Point(42, 10);
             label8.Name = "label8";
             label8.Size = new Size(217, 36);
             label8.TabIndex = 10;
             label8.Text = "Сумма расходов";
             // 
+            // but_account
+            // 
+            but_account.BackColor = Color.FromArgb(90, 149, 43);
+            but_account.Font = new Font("Calibri", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            but_account.ForeColor = SystemColors.ButtonHighlight;
+            but_account.Location = new Point(316, 12);
+            but_account.Name = "but_account";
+            but_account.Size = new Size(171, 44);
+            but_account.TabIndex = 1;
+            but_account.Text = "Баланс";
+            toolTip1.SetToolTip(but_account, "Посмотреть баланс");
+            but_account.UseVisualStyleBackColor = false;
+            but_account.Click += but_account_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(228, 228, 216);
             ClientSize = new Size(868, 451);
             Controls.Add(but_account);
             Controls.Add(tabControl1);
