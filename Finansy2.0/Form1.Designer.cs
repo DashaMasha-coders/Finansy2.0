@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            pictureBox1 = new PictureBox();
             button1 = new Button();
             maskedTextBox2 = new MaskedTextBox();
             comboBox1 = new ComboBox();
@@ -44,6 +46,7 @@
             label2 = new Label();
             label1 = new Label();
             tabPage2 = new TabPage();
+            pictureBox2 = new PictureBox();
             button2 = new Button();
             maskedTextBox3 = new MaskedTextBox();
             comboBox2 = new ComboBox();
@@ -60,7 +63,9 @@
             toolTip1 = new ToolTip(components);
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // tabControl1
@@ -76,6 +81,7 @@
             // tabPage1
             // 
             tabPage1.BackColor = Color.FromArgb(238, 243, 237);
+            tabPage1.Controls.Add(pictureBox1);
             tabPage1.Controls.Add(button1);
             tabPage1.Controls.Add(maskedTextBox2);
             tabPage1.Controls.Add(comboBox1);
@@ -91,6 +97,16 @@
             tabPage1.Size = new Size(842, 367);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Доходы";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.InitialImage = (Image)resources.GetObject("pictureBox1.InitialImage");
+            pictureBox1.Location = new Point(785, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(51, 44);
+            pictureBox1.TabIndex = 10;
+            pictureBox1.TabStop = false;
             // 
             // button1
             // 
@@ -207,6 +223,7 @@
             // tabPage2
             // 
             tabPage2.BackColor = Color.FromArgb(238, 243, 237);
+            tabPage2.Controls.Add(pictureBox2);
             tabPage2.Controls.Add(button2);
             tabPage2.Controls.Add(maskedTextBox3);
             tabPage2.Controls.Add(comboBox2);
@@ -222,6 +239,16 @@
             tabPage2.Size = new Size(842, 367);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Расходы";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
+            pictureBox2.InitialImage = (Image)resources.GetObject("pictureBox2.InitialImage");
+            pictureBox2.Location = new Point(781, 0);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(51, 43);
+            pictureBox2.TabIndex = 19;
+            pictureBox2.TabStop = false;
             // 
             // button2
             // 
@@ -360,8 +387,10 @@
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 
@@ -396,5 +425,7 @@
         private Label label6;
         private Label label7;
         private Label label8;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
     }
 }
