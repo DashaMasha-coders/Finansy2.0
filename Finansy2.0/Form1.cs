@@ -59,5 +59,10 @@ namespace Finansy2._0
             maskedTextBox1.Clear();
             MessageBox.Show($"Баланс: {account}", "Баланс", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
