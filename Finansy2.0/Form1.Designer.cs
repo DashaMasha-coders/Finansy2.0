@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            but_del1 = new Button();
             textBox1 = new TextBox();
             textBox_inc = new TextBox();
             pictureBox1 = new PictureBox();
@@ -46,6 +47,9 @@
             label2 = new Label();
             label1 = new Label();
             tabPage2 = new TabPage();
+            but_del2 = new Button();
+            comm_exps = new TextBox();
+            txt_exps = new TextBox();
             pictureBox2 = new PictureBox();
             but_substr = new Button();
             comboBox2 = new ComboBox();
@@ -59,8 +63,7 @@
             label8 = new Label();
             but_account = new Button();
             toolTip1 = new ToolTip(components);
-            txt_exps = new TextBox();
-            comm_exps = new TextBox();
+            clear_all = new Button();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -81,6 +84,7 @@
             // tabPage1
             // 
             tabPage1.BackColor = Color.FromArgb(238, 243, 237);
+            tabPage1.Controls.Add(but_del1);
             tabPage1.Controls.Add(textBox1);
             tabPage1.Controls.Add(textBox_inc);
             tabPage1.Controls.Add(pictureBox1);
@@ -97,6 +101,20 @@
             tabPage1.Size = new Size(842, 373);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Доходы";
+            // 
+            // but_del1
+            // 
+            but_del1.BackColor = Color.FromArgb(90, 149, 43);
+            but_del1.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            but_del1.ForeColor = SystemColors.ButtonHighlight;
+            but_del1.Location = new Point(187, 309);
+            but_del1.Margin = new Padding(3, 2, 3, 2);
+            but_del1.Name = "but_del1";
+            but_del1.Size = new Size(120, 37);
+            but_del1.TabIndex = 13;
+            but_del1.Text = "Удалить";
+            but_del1.UseVisualStyleBackColor = false;
+            but_del1.Click += but_del1_Click;
             // 
             // textBox1
             // 
@@ -127,8 +145,9 @@
             // but_add
             // 
             but_add.BackColor = Color.FromArgb(90, 149, 43);
+            but_add.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             but_add.ForeColor = SystemColors.ButtonHighlight;
-            but_add.Location = new Point(84, 306);
+            but_add.Location = new Point(6, 309);
             but_add.Margin = new Padding(3, 2, 3, 2);
             but_add.Name = "but_add";
             but_add.Size = new Size(120, 37);
@@ -227,6 +246,7 @@
             // tabPage2
             // 
             tabPage2.BackColor = Color.FromArgb(238, 243, 237);
+            tabPage2.Controls.Add(but_del2);
             tabPage2.Controls.Add(comm_exps);
             tabPage2.Controls.Add(txt_exps);
             tabPage2.Controls.Add(pictureBox2);
@@ -244,6 +264,36 @@
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Расходы";
             // 
+            // but_del2
+            // 
+            but_del2.BackColor = Color.FromArgb(90, 149, 43);
+            but_del2.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            but_del2.ForeColor = SystemColors.ButtonHighlight;
+            but_del2.Location = new Point(183, 309);
+            but_del2.Margin = new Padding(3, 2, 3, 2);
+            but_del2.Name = "but_del2";
+            but_del2.Size = new Size(120, 37);
+            but_del2.TabIndex = 22;
+            but_del2.Text = "Удалить";
+            but_del2.UseVisualStyleBackColor = false;
+            but_del2.Click += but_del2_Click;
+            // 
+            // comm_exps
+            // 
+            comm_exps.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            comm_exps.Location = new Point(14, 261);
+            comm_exps.Name = "comm_exps";
+            comm_exps.Size = new Size(265, 31);
+            comm_exps.TabIndex = 21;
+            // 
+            // txt_exps
+            // 
+            txt_exps.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            txt_exps.Location = new Point(14, 61);
+            txt_exps.Name = "txt_exps";
+            txt_exps.Size = new Size(265, 31);
+            txt_exps.TabIndex = 20;
+            // 
             // pictureBox2
             // 
             pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
@@ -257,8 +307,9 @@
             // but_substr
             // 
             but_substr.BackColor = Color.FromArgb(90, 149, 43);
+            but_substr.Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             but_substr.ForeColor = SystemColors.ButtonHighlight;
-            but_substr.Location = new Point(77, 302);
+            but_substr.Location = new Point(6, 309);
             but_substr.Margin = new Padding(3, 2, 3, 2);
             but_substr.Name = "but_substr";
             but_substr.Size = new Size(120, 37);
@@ -269,6 +320,7 @@
             // 
             // comboBox2
             // 
+            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox2.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "Здоровье", "Досуг", "Дом", "Кафе", "Образование", "Такси и транспорт", "Очисления", "Непредвиденные" });
@@ -355,7 +407,7 @@
             but_account.BackColor = Color.FromArgb(90, 149, 43);
             but_account.Font = new Font("Calibri", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
             but_account.ForeColor = SystemColors.ButtonHighlight;
-            but_account.Location = new Point(316, 12);
+            but_account.Location = new Point(668, 12);
             but_account.Name = "but_account";
             but_account.Size = new Size(171, 44);
             but_account.TabIndex = 1;
@@ -364,21 +416,19 @@
             but_account.UseVisualStyleBackColor = false;
             but_account.Click += but_account_Click;
             // 
-            // txt_exps
+            // clear_all
             // 
-            txt_exps.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            txt_exps.Location = new Point(14, 61);
-            txt_exps.Name = "txt_exps";
-            txt_exps.Size = new Size(265, 31);
-            txt_exps.TabIndex = 20;
-            // 
-            // comm_exps
-            // 
-            comm_exps.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            comm_exps.Location = new Point(14, 261);
-            comm_exps.Name = "comm_exps";
-            comm_exps.Size = new Size(265, 31);
-            comm_exps.TabIndex = 21;
+            clear_all.BackColor = Color.FromArgb(90, 149, 43);
+            clear_all.Font = new Font("Calibri", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            clear_all.ForeColor = SystemColors.ButtonHighlight;
+            clear_all.Location = new Point(404, 12);
+            clear_all.Name = "clear_all";
+            clear_all.Size = new Size(171, 44);
+            clear_all.TabIndex = 2;
+            clear_all.Text = "Очистить";
+            toolTip1.SetToolTip(clear_all, "Очисттить все");
+            clear_all.UseVisualStyleBackColor = false;
+            clear_all.Click += clear_all_Click;
             // 
             // Form1
             // 
@@ -386,6 +436,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(228, 228, 216);
             ClientSize = new Size(868, 451);
+            Controls.Add(clear_all);
             Controls.Add(but_account);
             Controls.Add(tabControl1);
             Name = "Form1";
@@ -433,5 +484,8 @@
         private TextBox textBox1;
         private TextBox comm_exps;
         private TextBox txt_exps;
+        private Button but_del1;
+        private Button but_del2;
+        private Button clear_all;
     }
 }

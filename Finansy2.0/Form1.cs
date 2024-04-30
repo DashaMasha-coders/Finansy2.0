@@ -48,11 +48,11 @@ namespace Finansy2._0
 
         private void but_substr_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_exps.Text) || string.IsNullOrEmpty(comboBox2.Text) || string.IsNullOrEmpty(comm_exps.Text)) 
+            if (string.IsNullOrEmpty(txt_exps.Text) || string.IsNullOrEmpty(comboBox2.Text) || string.IsNullOrEmpty(comm_exps.Text))
             {
                 MessageBox.Show("Нужно ввести значения во все поля ввода!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else 
+            else
             {
                 add_expenses(txt_exps.Text, comboBox2.Text, comm_exps.Text);
 
@@ -60,10 +60,14 @@ namespace Finansy2._0
                 account = account - substr;
 
                 MessageBox.Show($"Баланс: {account}", "Баланс", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                txt_exps.Clear();
+                comboBox2.SelectedIndex = -1;
+                comm_exps.Clear();
             }
 
         }
-       
+
 
         private void but_add_Click_1(object sender, EventArgs e)
         {
@@ -87,12 +91,12 @@ namespace Finansy2._0
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void add_incomes(string incs, string catg_incs, string comm_incs)
         {
-            string[] row = {incs, catg_incs, comm_incs};
+            string[] row = { incs, catg_incs, comm_incs };
             ListViewItem item = new ListViewItem(row);
             listView1.Items.Add(item);
         }
@@ -102,6 +106,29 @@ namespace Finansy2._0
             string[] rows = { exps, catg_exps, comm_exps };
             ListViewItem item = new ListViewItem(rows);
             listView2.Items.Add(item);
+        }
+
+        private void but_del1_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem item in listView1.SelectedItems)
+            {
+                listView1.Items.Remove(item);
+            }
+        }
+
+        private void but_del2_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem item in listView2.SelectedItems)
+            {
+                listView2.Items.Remove(item);
+            }
+        }
+
+        private void clear_all_Click(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            listView2.Items.Clear();
+            account = 0;
         }
     }
 }
