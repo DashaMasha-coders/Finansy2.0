@@ -172,6 +172,7 @@
             // 
             listView1.Columns.AddRange(new ColumnHeader[] { incs, catg_incs, comm_incs });
             listView1.Font = new Font("Calibri", 14F);
+            listView1.FullRowSelect = true;
             listView1.GridLines = true;
             listView1.Location = new Point(331, 46);
             listView1.Name = "listView1";
@@ -323,7 +324,7 @@
             comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox2.Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
             comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Здоровье", "Досуг", "Дом", "Кафе", "Образование", "Такси и транспорт", "Очисления", "Непредвиденные" });
+            comboBox2.Items.AddRange(new object[] { "Здоровье", "Досуг", "Дом", "Кафе и рестораны", "Образование", "Такси и транспорт", "Отчисления", "Непредвиденные", "Уход за собой", "Одежда", "Прочее" });
             comboBox2.Location = new Point(14, 156);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(265, 31);
@@ -333,6 +334,7 @@
             // 
             listView2.Columns.AddRange(new ColumnHeader[] { columnHeader4, columnHeader5, columnHeader6 });
             listView2.Font = new Font("Calibri", 14F);
+            listView2.FullRowSelect = true;
             listView2.GridLines = true;
             listView2.Location = new Point(327, 45);
             listView2.Name = "listView2";
@@ -407,7 +409,7 @@
             but_account.BackColor = Color.FromArgb(90, 149, 43);
             but_account.Font = new Font("Calibri", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
             but_account.ForeColor = SystemColors.ButtonHighlight;
-            but_account.Location = new Point(668, 12);
+            but_account.Location = new Point(314, 12);
             but_account.Name = "but_account";
             but_account.Size = new Size(171, 44);
             but_account.TabIndex = 1;
@@ -421,7 +423,7 @@
             clear_all.BackColor = Color.FromArgb(90, 149, 43);
             clear_all.Font = new Font("Calibri", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
             clear_all.ForeColor = SystemColors.ButtonHighlight;
-            clear_all.Location = new Point(404, 12);
+            clear_all.Location = new Point(681, 12);
             clear_all.Name = "clear_all";
             clear_all.Size = new Size(171, 44);
             clear_all.TabIndex = 2;
