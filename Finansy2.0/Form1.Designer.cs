@@ -136,7 +136,7 @@
             // 
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
             pictureBox1.InitialImage = (Image)resources.GetObject("pictureBox1.InitialImage");
-            pictureBox1.Location = new Point(772, 5);
+            pictureBox1.Location = new Point(785, 3);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(51, 40);
             pictureBox1.TabIndex = 10;
@@ -299,7 +299,7 @@
             // 
             pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
             pictureBox2.InitialImage = (Image)resources.GetObject("pictureBox2.InitialImage");
-            pictureBox2.Location = new Point(772, 7);
+            pictureBox2.Location = new Point(781, 3);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(51, 39);
             pictureBox2.TabIndex = 19;
