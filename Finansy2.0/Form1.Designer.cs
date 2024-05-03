@@ -442,6 +442,7 @@
             Controls.Add(but_account);
             Controls.Add(tabControl1);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
