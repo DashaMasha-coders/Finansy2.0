@@ -159,7 +159,7 @@ namespace Finansy2._0
         {
 
         }
-
+        //¬вод только чисел в поле дл€ суммы дохода 
         private void textBox_inc_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
@@ -168,7 +168,7 @@ namespace Finansy2._0
                 e.Handled = true;
             }
         }
-
+        //¬вод только чисел в поле дл€ суммы расхода
         private void txt_exps_KeyPress(object sender, KeyPressEventArgs e)
         {
             char cha = e.KeyChar;
