@@ -145,9 +145,14 @@ namespace Finansy2._0
         //Кнопка для очистки всех списков и баланса счета
         private void clear_all_Click(object sender, EventArgs e)
         {
+            DialogResult a = MessageBox.Show("Вы уверены?", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (a == DialogResult.Yes) 
+            {
             listView1.Items.Clear();
             listView2.Items.Clear();
             account = 0;
+            }
         }
 
         private void textBox_inc_TextChanged(object sender, EventArgs e)
