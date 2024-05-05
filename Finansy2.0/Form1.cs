@@ -57,7 +57,7 @@ namespace Finansy2._0
                 MessageBox.Show("Нужно ввести значения во все поля ввода!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
-            {  
+            {
                 //Вызов метода доюавления всех элементов в список расходов
                 add_expenses(txt_exps.Text, comboBox2.Text, comm_exps.Text);
 
@@ -96,7 +96,7 @@ namespace Finansy2._0
 
                 //Вывод баланса счета
                 MessageBox.Show($"Баланс: {account}", "Баланс", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+
                 //Очистка для полей ввода данных о доходах
                 textBox_inc.Clear();
                 textBox1.Clear();
@@ -148,6 +148,29 @@ namespace Finansy2._0
             listView1.Items.Clear();
             listView2.Items.Clear();
             account = 0;
+        }
+
+        private void textBox_inc_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_inc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!Char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_exps_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char cha = e.KeyChar;
+            if (!Char.IsDigit(cha) && cha != 8)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

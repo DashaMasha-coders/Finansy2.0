@@ -131,6 +131,8 @@
             textBox_inc.Name = "textBox_inc";
             textBox_inc.Size = new Size(265, 31);
             textBox_inc.TabIndex = 11;
+            textBox_inc.TextChanged += textBox_inc_TextChanged;
+            textBox_inc.KeyPress += textBox_inc_KeyPress;
             // 
             // pictureBox1
             // 
@@ -294,6 +296,7 @@
             txt_exps.Name = "txt_exps";
             txt_exps.Size = new Size(265, 31);
             txt_exps.TabIndex = 20;
+            txt_exps.KeyPress += txt_exps_KeyPress;
             // 
             // pictureBox2
             // 
